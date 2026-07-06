@@ -15,6 +15,11 @@ export interface Spot {
   hasDetailPage: boolean;
   facilities?: string[];
   htm?: HTMItem[];
+
+  additionalInfo?: {
+    phone?: string;
+    website?: string;
+  };
 }
 
 export const spotsData: Spot[] = [
