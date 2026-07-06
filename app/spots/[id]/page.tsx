@@ -166,7 +166,7 @@ export default function SpotDetailPage() {
           {/* FASILITAS BULLET LIST */}
           {spot.facilities && spot.facilities.length > 0 && (
             <div className="space-y-4">
-              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+              <h3 className="text-xs font-bold text-black uppercase tracking-widest">
                 Fasilitas Pendukung
               </h3>
               <ul className="space-y-2.5 text-sm md:text-base text-slate-600 font-light list-disc list-inside">
@@ -184,7 +184,7 @@ export default function SpotDetailPage() {
           {/* HARGA TIKET (HTM) */}
           {spot.htm && spot.htm.length > 0 && (
             <div className="space-y-4">
-              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+              <h3 className="text-xs font-bold text-black uppercase tracking-widest">
                 Informasi Retribusi / HTM
               </h3>
               <div className="space-y-3 divide-y divide-slate-100">
@@ -204,6 +204,42 @@ export default function SpotDetailPage() {
               </div>
             </div>
           )}
+          {spot.additionalInfo &&
+            (spot.additionalInfo.phone || spot.additionalInfo.website) && (
+              <div className="col-span-1 md:col-span-2 pt-6 border-t border-slate-100 space-y-4">
+                <h3 className="text-xs font-bold text-black uppercase tracking-widest">
+                  Informasi Kontak & Layanan
+                </h3>
+                <div className="flex flex-wrap gap-6 text-sm md:text-base">
+                  {/* Jika ada nomor telepon/CP, render bagian ini */}
+                  {spot.additionalInfo.phone && (
+                    <div className="flex items-center gap-2.5 text-slate-600 font-light">
+                      Contact Person :
+                      <span>
+                        <strong className="text-slate-800 font-normal">
+                          {spot.additionalInfo.phone}
+                        </strong>
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Jika ada tautan website, render bagian ini */}
+                  {spot.additionalInfo.website && (
+                    <div className="flex items-center gap-2.5 text-slate-600 font-light">
+                      Website :
+                      <a
+                        href={spot.additionalInfo.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 hover:underline font-medium"
+                      >
+                        {spot.additionalInfo.website}
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
         </div>
 
         {/* TOMBOL TINDAKAN RUTE MAPS */}
@@ -212,7 +248,7 @@ export default function SpotDetailPage() {
             href={spot.gmapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 text-sm font-bold text-white transition-all bg-emerald-600 hover:bg-emerald-700 px-6 py-3.5 rounded-xl text-center shadow-lg shadow-emerald-600/10 hover:scale-[1.01]"
+            className="w-full md:w-full inline-flex items-center justify-center gap-2.5 text-sm font-bold text-white transition-all bg-emerald-600 hover:bg-emerald-700 px-6 py-3.5 rounded-xl text-center shadow-lg shadow-emerald-600/10 hover:scale-[1.01]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

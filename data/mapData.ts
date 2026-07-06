@@ -75,4 +75,32 @@ export const spotsData: Spot[] = [
     ],
     hasDetailPage: false,
   },
+  {
+    id: "4",
+    name: "Pagupon",
+    description: "Penginapan blalalalalalala",
+    coordinates: [-7.8004439847446205, 112.51629540831902],
+    gmapsUrl: "https://maps.app.goo.gl/FFhLdyAbTpozwWx8A",
+    zoom: 17,
+    category: "wisata",
+    images: [
+      "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1472214222541-d510753a4707?auto=format&fit=crop&q=80&w=600",
+    ],
+    hasDetailPage: true,
+    facilities: [
+      "penginapan",
+      "spot foto",
+      "cafe",
+      "resto",
+      "grill",
+      "parkiran",
+      "kolam renang anak",
+    ],
+    htm: [{ label: "Reguler", price: "Rp. 5.000" }],
+
+    additionalInfo: {
+      website: "https://paguponcamp.com",
+    },
+  },
 ];
