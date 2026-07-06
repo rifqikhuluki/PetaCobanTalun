@@ -10,10 +10,8 @@ export default function SpotDetailPage() {
   const router = useRouter();
   const { id } = params;
 
-  // Mencari data spot berdasarkan ID
   const spot = spotsData.find((s) => s.id === id);
 
-  // State internal untuk slider foto
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   if (!spot) {
@@ -53,12 +51,12 @@ export default function SpotDetailPage() {
     <div className="min-h-screen w-full bg-slate-50 font-sans text-slate-900 flex flex-col selection:bg-emerald-500 selection:text-white">
       {/* AREA UTAMA ATAS: NAVBAR DAN SLIDER */}
       <div className="w-full relative flex-shrink-0 bg-slate-900">
-        {/* NAVBAR GLOBAL: Melayang transparan */}
+        {/* NAVBAR */}
         <div className="absolute top-0 inset-x-0 z-40 bg-gradient-to-b from-black/60 to-transparent pb-8">
           <Navbar />
         </div>
 
-        {/* SLIDER GAMBAR UTAM */}
+        {/* SLIDER GAMBAR */}
         <div className="w-full h-[45vh] md:h-[60vh] relative overflow-hidden">
           {spot.images && spot.images.length > 0 ? (
             <img
@@ -130,7 +128,7 @@ export default function SpotDetailPage() {
         </div>
       </div>
 
-      {/* AREA KONTEN DETAIL UTAMA (FRAMELESS - ADAPTASI DESCRIPTION SECTION STYLE) */}
+      {/* AREA KONTEN DETAIL UTAMA*/}
       <main className="w-full flex-1 max-w-6xl mx-auto px-6 md:px-1 py-3 md:py-16 space-y-10">
         {/* BAGIAN JUDUL UTAMA */}
         <div className="space-y-3">
@@ -150,7 +148,7 @@ export default function SpotDetailPage() {
           </h1>
         </div>
 
-        {/* DESKRIPSI UTAMA (Mengikuti gaya leading-relaxed tipografi image_19c3e6.png) */}
+        {/* DESKRIPSI UTAMA */}
         <div className="text-base md:text-lg text-slate-600 leading-relaxed font-light space-y-4 text-justify">
           <p>
             <strong className="text-slate-900 font-semibold">
@@ -165,7 +163,7 @@ export default function SpotDetailPage() {
 
         {/* DUA KOLOM UNTUK FASILITAS & HTM */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-2">
-          {/* KOLOM KIRI: FASILITAS BULLET LIST */}
+          {/* FASILITAS BULLET LIST */}
           {spot.facilities && spot.facilities.length > 0 && (
             <div className="space-y-4">
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
@@ -183,7 +181,7 @@ export default function SpotDetailPage() {
             </div>
           )}
 
-          {/* KOLOM KANAN: HARGA TIKET (HTM) */}
+          {/* HARGA TIKET (HTM) */}
           {spot.htm && spot.htm.length > 0 && (
             <div className="space-y-4">
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
@@ -240,7 +238,7 @@ export default function SpotDetailPage() {
         </div>
       </main>
 
-      {/* FOOTER GLOBAL */}
+      {/* FOOTER */}
       <Footer />
     </div>
   );

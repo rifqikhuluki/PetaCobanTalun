@@ -8,7 +8,6 @@ export default function Footer() {
         <div className="flex flex-col gap-4 sm:flex items-center">
           {/* 3 Logo Sejajar */}
           <div className="flex items-center gap-3">
-            {/* Menggunakan bg-slate-100 agar logo transparan tetap kelihatan batasnya */}
             <div className="w-14 h-14 bg-slate-100 rounded-full  flex items-center justify-center">
               <img
                 src="/LAMBANG WARNA.png"
@@ -38,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BAGIAN KANAN: DESKRIPSI KREDIT PROKER */}
+        {/* DESKRIPSI KREDIT PROKER */}
         <div className="max-w-md flex flex-col gap-2 border-t border-slate-100 md:border-t-0 pt-6 md:pt-0">
           <h4 className="text-black font-bold uppercase tracking-wider flex items-center gap-2">
             Kredit Pengembang
