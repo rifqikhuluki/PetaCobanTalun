@@ -5,23 +5,27 @@ export default function DescriptionSection() {
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&q=80&w=600",
+      src: "/airterjun/2.jpg",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=600",
+      src: "/seribuayunan/4.jpg",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600",
+      src: "/jeep/2.jpg",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&q=80&w=600",
+      src: "/oyot/1.jpg",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1472214222541-d510753a4707?auto=format&fit=crop&q=80&w=600",
+      src: "/pagupon/6.jpg",
+    },
+    {
+      id: 6,
+      src: "/tamanbunga/3.jpg",
     },
   ];
 
