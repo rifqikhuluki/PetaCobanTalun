@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { spotsData } from "@/data/mapData";
@@ -130,20 +131,48 @@ export default function SpotDetailPage() {
 
       {/* AREA KONTEN DETAIL UTAMA*/}
       <main className="w-full flex-1 max-w-6xl mx-auto px-6 md:px-1 py-3 md:py-16 space-y-10">
-        {/* BAGIAN JUDUL UTAMA */}
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
-            <span
-              className={`text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded ${
-                spot.category === "wisata"
-                  ? "bg-emerald-100 text-emerald-800"
-                  : "bg-blue-100 text-blue-800"
-              }`}
+        {/* BAGIAN JUDUL UTAMA + TOMBOL KEMBALI */}
+        <div className="space-y-4">
+          {/* BARIS TOMBOL KEMBALI DAN KATEGORI */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            {/* Tombol Back Minimalis */}
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors group w-fit"
             >
-              {spot.category}
-            </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2.5}
+                stroke="currentColor"
+                className="w-4 h-4 transition-transform group-hover:-translate-x-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
+              Kembali ke Beranda
+            </Link>
+
+            {/* Tag Kategori */}
+            <div className="flex items-center gap-2 sm:self-center">
+              <span
+                className={`text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded ${
+                  spot.category === "wisata"
+                    ? "bg-emerald-100 text-emerald-800"
+                    : "bg-blue-100 text-blue-800"
+                }`}
+              >
+                {spot.category}
+              </span>
+            </div>
           </div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+
+          {/* Judul Spot */}
+          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight pt-2">
             {spot.name}
           </h1>
         </div>
@@ -250,26 +279,7 @@ export default function SpotDetailPage() {
             rel="noopener noreferrer"
             className="w-full md:w-full inline-flex items-center justify-center gap-2.5 text-sm font-bold text-white transition-all bg-emerald-600 hover:bg-emerald-700 px-6 py-3.5 rounded-xl text-center shadow-lg shadow-emerald-600/10 hover:scale-[1.01]"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2.5}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-              />
-            </svg>
-            Dapatkan Petunjuk Rute Jalan (Google Maps)
+            Petunjuk Rute
           </a>
         </div>
       </main>
