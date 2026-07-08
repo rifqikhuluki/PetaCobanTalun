@@ -1,37 +1,45 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function DescriptionSection() {
+  // Menambahkan properti 'name' pada tiap objek gambar
   const images = [
     {
       id: 1,
       src: "/airterjun/2.jpg",
+      name: "Air Terjun",
     },
     {
       id: 2,
       src: "/seribuayunan/4.jpg",
+      name: "Seribu Ayunan",
     },
     {
       id: 3,
       src: "/jeep/2.jpg",
+      name: "Jeep Offroad",
     },
     {
       id: 4,
       src: "/oyot/1.jpg",
+      name: "Oyot",
     },
     {
       id: 5,
       src: "/pagupon/6.jpg",
+      name: "Pagupon Camp",
     },
     {
       id: 6,
       src: "/tamanbunga/3.jpg",
+      name: "Taman Bunga",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const maxSteps = images.length - 3;
+
+  const isHovered = useRef(false);
 
   const nextCarousel = () => {
     setCurrentIndex((prev) => (prev >= maxSteps ? 0 : prev + 1));
@@ -40,6 +48,17 @@ export default function DescriptionSection() {
   const prevCarousel = () => {
     setCurrentIndex((prev) => (prev === 0 ? maxSteps : prev - 1));
   };
+
+  // AUTOPLAY
+  useEffect(() => {
+    const playInterval = setInterval(() => {
+      if (!isHovered.current) {
+        nextCarousel();
+      }
+    }, 4000);
+
+    return () => clearInterval(playInterval);
+  }, [maxSteps]);
 
   return (
     <section className="w-full bg-white py-16 md:py-24 border-b border-slate-100 overflow-hidden">
@@ -76,11 +95,19 @@ export default function DescriptionSection() {
           </div>
         </div>
 
-        {/* CAROUSEL SIMPEL MURNI FOTO */}
+        {/* CAROUSEL */}
         <div className="space-y-6">
           <div className="relative w-full flex items-center">
             {/* Jendela Utama Menahan Card */}
-            <div className="overflow-hidden w-full p-2">
+            <div
+              className="overflow-hidden w-full p-2"
+              onMouseEnter={() => {
+                isHovered.current = true;
+              }}
+              onMouseLeave={() => {
+                isHovered.current = false;
+              }}
+            >
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
@@ -93,12 +120,23 @@ export default function DescriptionSection() {
                     className="w-full md:w-1/3 flex-shrink-0 px-3"
                   >
                     <div className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-1">
-                      <div className="relative aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden">
+                      <div className="relative aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden group/item">
+                        {/* FOTO UTAMA */}
                         <img
                           src={img.src}
-                          alt="Dokumentasi Wisata"
-                          className="w-full h-full object-cover pointer-events-none"
+                          alt={img.name}
+                          className="w-full h-full object-cover pointer-events-none transition-transform duration-500 group-hover/item:scale-105"
                         />
+
+                        {/* LAPISAN GRADASI GELAP DI BAGIAN BAWAH FOTO */}
+                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
+
+                        {/* TEKS NAMA SPOT DI ATAS GRADASI */}
+                        <div className="absolute bottom-0 inset-x-0 p-4 z-10">
+                          <p className="text-sm md:text-base font-bold text-white tracking-wide drop-shadow-sm">
+                            {img.name}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -106,7 +144,7 @@ export default function DescriptionSection() {
               </div>
             </div>
 
-            {/* Tombol Panah Kiri (Geser 1 Foto) */}
+            {/* Tombol Panah Kiri */}
             <button
               onClick={prevCarousel}
               className="absolute -left-4 md:-left-6 z-20 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-600 hover:text-emerald-600 active:scale-90 transition-all"
@@ -127,7 +165,7 @@ export default function DescriptionSection() {
               </svg>
             </button>
 
-            {/* Tombol Panah Kanan (Geser 1 Foto) */}
+            {/* Tombol Panah Kanan */}
             <button
               onClick={nextCarousel}
               className="absolute -right-4 md:-right-6 z-20 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-slate-600 hover:text-emerald-600 active:scale-90 transition-all"
@@ -149,22 +187,16 @@ export default function DescriptionSection() {
             </button>
           </div>
 
-          {/* Indikator Titik Bulat Bawah (Hanya 2 Titik) */}
+          {/* Indikator Titik Bulat Bawah */}
           <div className="flex justify-center gap-2 pt-2">
-            {/* Titik 1: Mewakili Halaman Awal */}
             <button
               onClick={() => setCurrentIndex(0)}
-              className={`h-2 rounded-full transition-all duration-350 ${
-                currentIndex <= 1 ? "w-6 bg-emerald-600" : "w-2 bg-slate-200"
-              }`}
+              className={`h-2 rounded-full transition-all duration-350 ${currentIndex <= 1 ? "w-6 bg-emerald-600" : "w-2 bg-slate-200"}`}
               aria-label="Ke halaman awal"
             />
-            {/* Titik 2: Mewakili Halaman Akhir */}
             <button
               onClick={() => setCurrentIndex(maxSteps)}
-              className={`h-2 rounded-full transition-all duration-350 ${
-                currentIndex > 1 ? "w-6 bg-emerald-600" : "w-2 bg-slate-200"
-              }`}
+              className={`h-2 rounded-full transition-all duration-350 ${currentIndex > 1 ? "w-6 bg-emerald-600" : "w-2 bg-slate-200"}`}
               aria-label="Ke halaman akhir"
             />
           </div>
