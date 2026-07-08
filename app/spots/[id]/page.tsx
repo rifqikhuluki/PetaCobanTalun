@@ -10,7 +10,7 @@ export default function SpotDetailPage() {
   const router = useRouter();
   const { id } = params;
 
-  const spot = spotsData.find((s) => s.id === id);
+  const spot = spotsData.find((s) => s.id.toString() === id?.toString());
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
