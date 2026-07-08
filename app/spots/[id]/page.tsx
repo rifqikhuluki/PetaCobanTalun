@@ -49,7 +49,7 @@ export default function SpotDetailPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-slate-50 font-sans text-slate-900 flex flex-col selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen w-full bg-white font-sans text-slate-900 flex flex-col selection:bg-emerald-500 selection:text-white">
       {/* AREA UTAMA ATAS: NAVBAR DAN SLIDER */}
       <div className="w-full relative flex-shrink-0 bg-slate-900">
         {/* NAVBAR */}
