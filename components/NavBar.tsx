@@ -11,7 +11,7 @@ export default function Navbar() {
         >
           <div className="flex items-center gap-2">
             {/* Logo 1: Universitas */}
-            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
                 src="/LAMBANG WARNA.png"
                 alt="Logo Universitas"
@@ -20,7 +20,7 @@ export default function Navbar() {
             </div>
 
             {/* Logo 2: Tulungrejo */}
-            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
                 src="/tulungrejo.jpeg"
                 alt="Logo KKN"
@@ -29,7 +29,7 @@ export default function Navbar() {
             </div>
 
             {/* Logo 3: KKN */}
-            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
                 src="/um-bbm.jpeg"
                 alt="Logo KKN"
