@@ -17,15 +17,15 @@ export default function Footer() {
             </div>
             <div className="w-14 h-14 bg-slate-100 rounded-full  flex items-center justify-center">
               <img
-                src="/LAMBANG WARNA.png"
-                alt="Logo KKN"
+                src="/tulungrejo.jpeg"
+                alt="Logo Tulungrejo"
                 className="h-full w-full object-contain"
               />
             </div>
             <div className="w-14 h-14 bg-slate-100 rounded-full  flex items-center justify-center">
               <img
-                src="/LAMBANG WARNA.png"
-                alt="Logo UM"
+                src="/um-bbm.jpeg"
+                alt="Logo KKN"
                 className="h-full w-full object-contain"
               />
             </div>
