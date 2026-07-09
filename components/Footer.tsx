@@ -8,21 +8,21 @@ export default function Footer() {
         <div className="flex flex-col gap-4 sm:flex items-center">
           {/* 3 Logo Sejajar */}
           <div className="flex items-center gap-3">
-            <div className="w-14 h-14 bg-slate-100 rounded-full  flex items-center justify-center">
+            <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
               <img
                 src="/LAMBANG WARNA.png"
                 alt="Logo UM"
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="w-14 h-14 bg-slate-100 rounded-full  flex items-center justify-center">
+            <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
               <img
                 src="/tulungrejo.jpeg"
                 alt="Logo Tulungrejo"
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="w-14 h-14 bg-slate-100 rounded-full  flex items-center justify-center">
+            <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden  flex items-center justify-center">
               <img
                 src="/um-bbm.jpeg"
                 alt="Logo KKN"
