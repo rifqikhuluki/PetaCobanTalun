@@ -134,7 +134,7 @@ export default function SpotDetailPage() {
         {/* BAGIAN JUDUL UTAMA + TOMBOL KEMBALI */}
         <div className="space-y-4">
           {/* BARIS TOMBOL KEMBALI DAN KATEGORI */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex flex-row items-center justify-between gap-4 pt-4 md:pt-0">
             {/* Tombol Back Minimalis */}
             <Link
               href="/"
@@ -146,7 +146,7 @@ export default function SpotDetailPage() {
                 viewBox="0 0 24 24"
                 strokeWidth={2.5}
                 stroke="currentColor"
-                className="w-4 h-4 transition-transform group-hover:-translate-x-1"
+                className="w-5 h-5 transition-transform group-hover:-translate-x-1"
               >
                 <path
                   strokeLinecap="round"
@@ -154,7 +154,7 @@ export default function SpotDetailPage() {
                   d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
                 />
               </svg>
-              Kembali ke Beranda
+              <span className="hidden sm:inline">Kembali ke Beranda</span>
             </Link>
 
             {/* Tag Kategori */}
