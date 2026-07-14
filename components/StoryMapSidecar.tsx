@@ -124,7 +124,7 @@ export default function StoryMapSidecar() {
   return (
     <div className="relative w-full h-screen bg-slate-100 overflow-hidden flex flex-col md:flex-row">
       {/* Container Peta */}
-      <div className="relative md:absolute top-0 left-0 w-full h-[40vh] md:h-full z-10">
+      <div className="relative md:absolute top-0 left-0 w-full h-[25vh] md:h-full z-10">
         <MapContainer
           center={activeSpot?.coordinates || [0, 0]}
           zoom={activeSpot?.zoom || 13}
@@ -293,8 +293,8 @@ export default function StoryMapSidecar() {
                   }`}
                 >
                   {/* Box Kartu Putih */}
-                  <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col h-fit relative">
-                    <div className="absolute top-4 left-4 z-20 w-8 h-8 bg-amber-400 text-slate-900 border-2 border-white font-black rounded-full flex items-center justify-center shadow text-xs">
+                  <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col relative h-full">
+                    <div className="absolute top-4 left-3 z-20 w-8 h-8 bg-amber-400 text-slate-900 border-2 border-white font-black rounded-full flex items-center justify-center shadow text-xs">
                       {originalIndex + 1}
                     </div>
 

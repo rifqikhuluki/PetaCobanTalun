@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
-// Memuat komponen peta secara dinamis
 const StoryMapSidecar = dynamic(() => import("./StoryMapSidecar"), {
   ssr: false,
 });
@@ -13,15 +12,14 @@ export default function StoryMapWrapper() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Memanfaatkan Intersection Observer agar peta baru dimuat saat user scroll mendekati fold peta
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setShouldRenderMap(true);
-          observer.disconnect(); // Matikan observer setelah peta sukses dimuat sekali
+          observer.disconnect();
         }
       },
-      { rootMargin: "200px" }, // Peta mulai di-load ketika user berjarak 200px sebelum area peta
+      { rootMargin: "200px" },
     );
 
     if (containerRef.current) {
