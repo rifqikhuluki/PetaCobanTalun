@@ -6,32 +6,32 @@ export default function DescriptionSection() {
   const images = [
     {
       id: 1,
-      src: "/airterjun/2.jpg",
+      src: "/airterjun/2.webp",
       name: "Air Terjun",
     },
     {
       id: 2,
-      src: "/seribuayunan/4.jpg",
+      src: "/seribuayunan/4.webp",
       name: "Seribu Ayunan",
     },
     {
       id: 3,
-      src: "/jeep/2.jpg",
+      src: "/jeep/2.webp",
       name: "Jeep Offroad",
     },
     {
       id: 4,
-      src: "/oyot/1.jpg",
+      src: "/oyot/1.webp",
       name: "Oyot",
     },
     {
       id: 5,
-      src: "/pagupon/6.jpg",
+      src: "/pagupon/6.webp",
       name: "Pagupon Camp",
     },
     {
       id: 6,
-      src: "/tamanbunga/3.jpg",
+      src: "/tamanbunga/3.webp",
       name: "Taman Bunga",
     },
   ];

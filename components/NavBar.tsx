@@ -13,7 +13,7 @@ export default function Navbar() {
             {/* Logo 1: Universitas */}
             <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
-                src="/LAMBANG WARNA.png"
+                src="/Logo_UM.webp"
                 alt="Logo Universitas"
                 className="w-full h-full object-contain"
               />
@@ -22,7 +22,7 @@ export default function Navbar() {
             {/* Logo 2: Tulungrejo */}
             <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
-                src="/tulungrejo.jpeg"
+                src="/Logo_Tulungrejo.webp"
                 alt="Logo KKN"
                 className="w-full h-full object-contain"
               />
@@ -31,7 +31,7 @@ export default function Navbar() {
             {/* Logo 3: KKN */}
             <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
-                src="/um-bbm.jpeg"
+                src="/Logo_UM_BBM.webp"
                 alt="Logo KKN"
                 className="w-full h-full object-contain"
               />

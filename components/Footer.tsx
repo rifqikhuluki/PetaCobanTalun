@@ -10,21 +10,21 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
               <img
-                src="/LAMBANG WARNA.png"
+                src="/Logo_UM.webp"
                 alt="Logo UM"
                 className="h-full w-full object-contain"
               />
             </div>
             <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden flex items-center justify-center">
               <img
-                src="/tulungrejo.jpeg"
+                src="/Logo_Tulungrejo.webp"
                 alt="Logo Tulungrejo"
                 className="h-full w-full object-contain"
               />
             </div>
             <div className="w-14 h-14 bg-slate-100 rounded-full  overflow-hidden  flex items-center justify-center">
               <img
-                src="/um-bbm.jpeg"
+                src="/Logo_UM_BBM.webp"
                 alt="Logo KKN"
                 className="h-full w-full object-contain"
               />
