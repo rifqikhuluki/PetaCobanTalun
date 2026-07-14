@@ -122,7 +122,7 @@ export default function StoryMapSidecar() {
   }, [filteredSpots]);
 
   return (
-    <div className="relative w-full h-screen bg-slate-100 overflow-hidden flex flex-col md:flex-row">
+    <div className="relative w-full h-full bg-slate-100 overflow-hidden flex flex-col md:flex-row">
       {/* Container Peta */}
       <div className="relative md:absolute top-0 left-0 w-full h-[25vh] md:h-full z-10">
         <MapContainer
@@ -293,7 +293,7 @@ export default function StoryMapSidecar() {
                   }`}
                 >
                   {/* Box Kartu Putih */}
-                  <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col relative h-full">
+                  <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xl overflow-hidden flex flex-col relative">
                     <div className="absolute top-4 left-3 z-20 w-8 h-8 bg-amber-400 text-slate-900 border-2 border-white font-black rounded-full flex items-center justify-center shadow text-xs">
                       {originalIndex + 1}
                     </div>
@@ -316,7 +316,7 @@ export default function StoryMapSidecar() {
                         <h3 className="text-base md:text-lg font-bold text-slate-900 tracking-tight">
                           {spot.name}
                         </h3>
-                        <p className="text-xs text-slate-600 leading-relaxed text-justify font-light line-clamp-4 md:line-clamp-none">
+                        <p className="text-[11px] md:text-xs text-slate-600 leading-normal text-justify font-light line-clamp-2 md:line-clamp-3">
                           {spot.description}
                         </p>
                       </div>

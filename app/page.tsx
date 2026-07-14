@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <DescriptionSection />
-      <section className="w-full h-screen block relative">
+      <section className="w-full h-dscreen md:h-screen block relative overflow-hidden flex flex-col">
         <StoryMapWrapper />
       </section>
       <Footer />
