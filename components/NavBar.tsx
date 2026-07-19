@@ -28,6 +28,15 @@ export default function Navbar() {
               />
             </div>
 
+            {/* Logo 2: Coban Talun */}
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
+              <img
+                src="/Logo_Coban.webp"
+                alt="Logo Coban Talun"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
             {/* Logo 3: KKN */}
             <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
