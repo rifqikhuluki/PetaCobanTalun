@@ -20,7 +20,7 @@ export default function Navbar() {
             </div>
 
             {/* Logo 2: Tulungrejo */}
-            <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center">
               <img
                 src="/Logo_Tulungrejo.webp"
                 alt="Logo KKN"
