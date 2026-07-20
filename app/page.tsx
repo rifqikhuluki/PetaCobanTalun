@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen w-full bg-slate-50 font-sans text-slate-900 selection:bg-emerald-500 selection:text-white">
+      <link rel="icon" type="image/webp" href="/Logo_Coban.webp" />
+
       {/* Import CSS Leaflet */}
       <link
         rel="stylesheet"

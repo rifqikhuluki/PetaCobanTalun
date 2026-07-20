@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Peta Coban Talun",
   description: "Web Peta Wisata Interaktif Coban Talun",
+  icons: {
+    icon: [
+      {
+        url: "/Logo_Coban.webp",
+        type: "image/webp",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
