@@ -32,11 +32,7 @@ export const spotsData: Spot[] = [
     gmapsUrl: "https://maps.google.com/?q=-7.8001,112.5201",
     zoom: 21,
     category: "fasilitas",
-    images: [
-      "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600",
-    ],
+    images: ["/loket/loket1.webp", "loket/loket2.webp"],
     hasDetailPage: true,
     facilities: ["Toilet", "Mushola", "Parkir", "Area Kuliner"],
     htm: [
