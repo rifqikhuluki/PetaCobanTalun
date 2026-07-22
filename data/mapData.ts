@@ -246,7 +246,6 @@ export const spotsData: Spot[] = [
     category: "fasilitas",
     images: [
       "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1472214222541-d510753a4707?auto=format&fit=crop&q=80&w=600",
     ],
     hasDetailPage: false,
   },
@@ -260,7 +259,6 @@ export const spotsData: Spot[] = [
     category: "fasilitas",
     images: [
       "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1472214222541-d510753a4707?auto=format&fit=crop&q=80&w=600",
     ],
     hasDetailPage: false,
   },
