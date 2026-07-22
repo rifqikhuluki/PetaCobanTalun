@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import DescriptionSection from "../components/DescriptionSection";
 import StoryMapWrapper from "../components/StoryMapWrapper";
 import Footer from "../components/Footer";
+import "leaflet/dist/leaflet.css";
 
 export default function Home() {
   return (
@@ -10,12 +11,12 @@ export default function Home() {
       <link rel="icon" type="image/webp" href="/Logo_Coban.webp" />
 
       {/* Import CSS Leaflet */}
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossOrigin=""
-      />
+      /> */}
 
       <Navbar />
       <HeroSection />
